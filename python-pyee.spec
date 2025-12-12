@@ -2,7 +2,7 @@
 
 Name:		python-pyee
 Version:	13.0.0
-Release:	1
+Release:	2
 Source0:	https://files.pythonhosted.org/packages/source/p/%{module}/%{module}-%{version}.tar.gz
 Summary:	A rough port of Node.js's EventEmitter to Python
 URL:		https://pypi.org/project/pyee/
