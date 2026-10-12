@@ -2,7 +2,7 @@
 
 Name:		python-pyee
 Version:	13.0.1
-Release:	1
+Release:	2
 Summary:	A rough port of Node.js's EventEmitter to Python
 License:	MIT
 Group:		Development/Python
@@ -28,6 +28,10 @@ threaded programming in python, such as async/await.
 %prep -a
 # Remove bundled egg-info
 rm -rf %{module}.egg-info
+
+%build -p
+# The sdist is not a git checkout, so the versioning backend needs the version.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 
 %files
 %doc README.md
